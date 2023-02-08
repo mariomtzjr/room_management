@@ -18,14 +18,17 @@ from django.urls import path
 
 from rest_framework import routers
 
-from rooms.views import RoomViewSet
-from events.views import EventViewSet
+from rooms.views import RoomViewSet, CustomerRoomViewSet
+from events.views import EventViewSet, CustomerEventViewSet
 from customers.views import CustomerViewSet
 
 router = routers.DefaultRouter()
-router.register(r'rooms', RoomViewSet)
-router.register(r'events', EventViewSet)
-router.register(r'customers', CustomerViewSet)
+router.register(r'business/rooms', RoomViewSet)
+router.register(r'customer/rooms', CustomerRoomViewSet)
+
+router.register(r'business/events', EventViewSet)
+router.register(r'customer/events', CustomerEventViewSet)
+router.register(r'customers', CustomerEventViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

@@ -26,8 +26,10 @@ A Django REST framework based API for managing a business focused on renting dif
 ## Endpoints
 The following endpoints are available in the API:
 
-- /rooms/: To create, retrieve, update and delete rooms.
-- /events/: To create, retrieve, update and delete events.
+- /business/rooms/: To create, retrieve, update and delete rooms from business.
+- /customer/rooms/: To list rooms from customer.
+- /business/events/: To create, retrieve, update and delete events from business.
+- /customer/events/: To create, retrieve and delete events from customers.
 - /customers/: To create, retrieve, update and delete customers.
 
 ## Installation
